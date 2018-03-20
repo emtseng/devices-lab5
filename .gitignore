@@ -3,8 +3,8 @@
 logs
 *.log
 
-# Enable this so that you data is not uploaded to github
-# *.csv 
+# Enable this so that your data is not uploaded to github
+# *.csv
 
 
 npm-debug.log*
