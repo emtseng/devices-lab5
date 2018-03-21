@@ -35,15 +35,10 @@ const serial = new serialPort('/dev/ttyUSB0', {
 const parser = new readLine({
   delimiter: '\r\n'
 });
+
 // Read data that is available on the serial port and send it to the websocket
-
-serial.on('open', function() {
-  console.log('port opened')
-})
-
 serial.pipe(parser);
 parser.on('data', function(data) {
-  console.log('read data from arduino')
   var newEntry = ((Date.now())+','+ data+'\r\n'); //connect the data to the current time
   fs.appendFile(fd, newEntry, function (err) { // append the new entry to the file
     if (err) throw err;
