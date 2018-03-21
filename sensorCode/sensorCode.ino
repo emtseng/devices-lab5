@@ -15,6 +15,7 @@
 // }
 
 #include "includes/dht.h"
+#include "includes/dht.cpp"
 
 dht DHT;
 
