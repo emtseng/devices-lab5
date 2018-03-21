@@ -27,8 +27,6 @@ void setup(){
 void loop()
 {
   int chk = DHT.read11(DHT11_PIN);
-  Serial.print(DHT.temperature);
-	Serial.print(',')
-	Serial.print(DHT.humidity);
+  Serial.println(DHT.temperature);
   delay(2000);
 }
